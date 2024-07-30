@@ -1,0 +1,134 @@
+.pageOne{
+  display: flex;
+  flex-direction: column;
+  background: bisque;
+  height: 95vh;
+  justify-content: space-between;
+}
+.giftHeart {
+  width: 70%;
+  height: 20vh;
+}
+
+.joImg1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.joImg1>img {
+  width: 50%;
+}
+
+.fingerPrint{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.fingerPrint>button{
+  all: unset;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #7618A1;
+  border: 2px solid #7618A1;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 30px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
+  cursor: pointer; 
+  outline: none; 
+  transition: 0.2s all; 
+}
+.fingerPrint>button:active { 
+  transform: scale(0.98); 
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+.fingerPrint>button:hover{
+  background-color: #7618a141;
+}
+.fingerPrint>button>img {
+  width: 30px;
+}
+.happybirthday {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.happybirthday>img{
+  width: 70%;
+}
+/* .............................................................................. */
+.pageTwo{
+  display: flex;
+  background: #e4ffc4;
+  height: 95vh;
+}
+.popScreen{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popScreen>div{
+  width: 90%;
+  height: auto;
+  border: 3px solid #366102b5;
+  border-radius: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.popScreen>div>div{
+  margin-bottom: 20px;
+}
+.popScreen h3,.popScreen p{
+  margin: 0;
+}
+.closePopButton>button{
+  color: #366102b5;
+  border: 2px solid #366102b5;
+  margin-top: 20px;
+}
+.pageTwo2{
+  display: flex;
+  background: #c2ebeb;
+  height: 95vh;
+  width: 100%;
+  background-image: url("./assets/image3.png");
+  background-size: cover;
+  background-position: -155% 75%;	
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+.pageTwo2 h4{
+  margin: 5px;
+  color: #0C468F;
+  line-height: 30px;
+  text-shadow: #d89800 1px 0 10px;
+}
+.pageTwo2 h5{
+  margin: 5px;
+  color: black;
+  line-height: 40px;
+  text-shadow: black 1px 0 10px;
+}
+.happy-birthday-gif{
+  width: 70px;
+    height: 70px;
+    rotate: 120deg;
+}
+.openVideoBtn>button{
+  color: #0C468F;
+  border: 2px solid #0C468F;
+  background-color: #d89800;
+}
+/* .............................................................. */
+.PageThree{
+  display: flex;
+  background: #efffb0;
+  height: 95vh;
+  width: 100%;
+}
