@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Page31 from '../../src/assets/loveletter.gif';
 import Page33 from '../../src/assets/loveletter2.gif';
 import Page32 from '../../src/assets/birthdayImgBanner.gif';
+import Page34 from '../../src/assets/candle.webp';
 import { MuiOtpInput } from 'mui-one-time-password-input'
 import Page21 from '../../src/assets/cake.png';
 import { useNavigate } from 'react-router-dom';
@@ -25,6 +26,7 @@ const PageThree = () => {
     <div className='PageThree'>
       <div style={{width:'100%',display:'flex',justifyContent:'space-between'}}>
       <img src={Page31} alt='loveletter' className='loveletter' />
+      <img src={Page34} alt='loveletter' className='candle' />
       <img src={Page33} alt='loveletter' className='loveletter' />
 
       </div>

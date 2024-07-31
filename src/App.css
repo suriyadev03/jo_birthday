@@ -141,6 +141,11 @@
   height: 15vh;
   float: left;
 }
+.candle{
+  width: 17%;
+  height: 70px;
+  margin-top: 30px;
+}
 .birthdayImgBanner{
   width: 90%;
   display: flex;
@@ -189,7 +194,7 @@
 .PageFour>div{
   height: 95vh;
   width: 100%;
-  background-color: #ffffffe3;
+  background-color: #090909a1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,32 +219,33 @@
   text-align: center;
 }
 .span1{
-  color: purple;
+  color: #ff31ff;
 }
 .span2{
-  color: blue;
+  color: #57a9ff;
 }
 .span3{
-  color: rgb(8, 158, 212);
+  color: #2ec8ff;
 }
 .span4{
-  color: rgb(4, 96, 0);
+  color: #2ffe26;
 }
 .span5{
-  color: rgb(175, 177, 3);
+  color: #fcff08;
 }
 .span6{
-  color: rgb(190, 101, 4);
+  color: #ff9a2b;
 }
 .span7{
-  color: rgb(188, 0, 0);
+  color: white;
 }
 .span8{
   font-weight: bold;
-  color: rgb(163, 0, 141);
+  color: #ff00dd;
   text-align: center;
   margin-bottom: 20px;
 }
+
 
 .PageFive{
   height: 95vh;
