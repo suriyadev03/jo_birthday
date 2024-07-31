@@ -1,24 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Page21 from '../../src/assets/cake.png';
 import Page22 from '../../src/assets/happy-birthday.gif';
 import { useNavigate } from 'react-router-dom';
+import Loader from './Loder/Loader';
 
 const PageTwo = () => {
   const navigate = useNavigate()
   const [popscreen, setPopScreen] = useState(true)
-
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false); 
+    }, 500); 
+  }, []);
   const closePop = () => {
     setPopScreen(false)
   }
 
 const openVideo = () => {
   navigate("/pageThree")
-
 }
 
 
 return (
-  <div className='pageTwo'>
+ 
+  <>
+  {isLoading ? (
+        <div className="pageTwo loader"><Loader/></div>
+      ) : (
+         <div className='pageTwo'>
     {popscreen ?
       <div className='popScreen'>
         <div>
@@ -61,6 +71,8 @@ return (
         <h3 className='header3'>எனக்கானவளே !</h3>
       </div>}
   </div>
+      )}
+  </>
 )
 }
 

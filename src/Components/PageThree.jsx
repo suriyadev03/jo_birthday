@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Page31 from '../../src/assets/loveletter.gif';
 import Page33 from '../../src/assets/loveletter2.gif';
 import Page32 from '../../src/assets/birthdayImgBanner.gif';
@@ -6,10 +6,17 @@ import Page34 from '../../src/assets/candle.webp';
 import { MuiOtpInput } from 'mui-one-time-password-input'
 import Page21 from '../../src/assets/cake.png';
 import { useNavigate } from 'react-router-dom';
+import Loader from './Loder/Loader';
 
 const PageThree = () => {
   const navigate = useNavigate()
   const [otp, setOtp] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false); 
+    }, 500); 
+  }, []);
   const handleChange = (newValue) => {
     setOtp(newValue)
   }
@@ -22,8 +29,11 @@ const PageThree = () => {
     }
   }
   return (
-    
-    <div className='PageThree'>
+    <>
+    {isLoading ? (
+        <div className="PageThree loader"><Loader/></div>
+      ) : (
+<div className='PageThree'>
       <div style={{width:'100%',display:'flex',justifyContent:'space-between'}}>
       <img src={Page31} alt='loveletter' className='loveletter' />
       <img src={Page34} alt='loveletter' className='candle' />
@@ -36,7 +46,7 @@ const PageThree = () => {
       <MuiOtpInput value={otp} onChange={handleChange} sx={{ width: "260px"}} />
       <div className='fingerPrint viewPage'>
           <button onClick={viewPage}>
-            <span>SUBMIT</span><img src={Page21} alt='cake' />
+            <span>OPEN</span><img src={Page21} alt='cake' />
           </button>
           <button onClick={()=>navigate("/pageFive")}>
             <span>SKIP</span><img src={Page21} alt='cake' />
@@ -44,6 +54,9 @@ const PageThree = () => {
         </div>
       </div>
     </div>
+      )}
+    </>
+    
   )
 }
 
