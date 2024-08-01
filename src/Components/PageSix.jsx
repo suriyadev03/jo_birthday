@@ -5,7 +5,7 @@ import Page21 from '../../src/assets/cake.png';
 import Loader from './Loder/Loader';
 
 
-const PageSix = () => {
+const PageSix = ({setAudioPlay}) => {
     const navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
@@ -14,8 +14,9 @@ const PageSix = () => {
         }, 250);
     }, []);
     const endPage = () => {
+        setAudioPlay(false)
         navigate("/")
-        window.location.reload();
+        
     }
     return (
         <>

@@ -4,12 +4,10 @@ import Page12 from '../../src/assets/image (2).png';
 import Page13 from '../../src/assets/cake.png';
 import Page14 from '../../src/assets/happybirthdaygif3.gif';
 import { useNavigate } from 'react-router-dom';
-import audioFile from '../../src/assets/audio.mp3';
 import Loader from './Loder/Loader';
 
-const PageOne = () => {
+const PageOne = ({setAudioPlay}) => {
     const navigate = useNavigate()
-    const [audio] = useState(new Audio(audioFile));
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         setTimeout(() => {
@@ -17,9 +15,9 @@ const PageOne = () => {
         }, 500);
     }, []);
     const openPageTwo = () => {
-        audio.pause();
         navigate("pageTwo")
-        audio.play();
+        setAudioPlay(true)
+        // audio.play();
 
     }
     return (
